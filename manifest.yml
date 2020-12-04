@@ -7,6 +7,6 @@ applications:
   instances: 1
   memory: 128M
   routes:
-    - route: ahojukka5-courses.eu-gb.mybluemix.net
+    - route: courses-ahojukka5.eu-gb.mybluemix.net
     - route: courses.ahojukka5.com
   stack: cflinuxfs3
