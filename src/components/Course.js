@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Divider, Header, Segment, Table } from 'semantic-ui-react';
+import { Header, Segment, Table } from 'semantic-ui-react';
 
 const Part = (props) => {
   return (
