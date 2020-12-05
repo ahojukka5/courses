@@ -6,12 +6,6 @@ import { Container, Divider, Icon, Header } from 'semantic-ui-react';
 
 import Course from './components/Course';
 
-const style = {
-  h1: {
-    marginTop: '3em',
-  },
-};
-
 const App = () => {
   const courses = [
     {
@@ -63,7 +57,8 @@ const App = () => {
   };
   return (
     <Container text>
-      <Header as="h1" style={style.h1}>
+      <Divider hidden />
+      <Header as="h1">
         <Icon name="student" />
         <Header.Content> Web development curriculum </Header.Content>
       </Header>
