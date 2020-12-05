@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Header, Segment, Table } from 'semantic-ui-react';
+import { Divider, Header, Segment, Table } from 'semantic-ui-react';
 
 const Part = (props) => {
   return (
     <Table.Row>
       <Table.Cell>{props.part.name}</Table.Cell>
-      <Table.Cell>{props.part.exercises}</Table.Cell>
+      <Table.Cell textAlign="center">{props.part.exercises}</Table.Cell>
     </Table.Row>
   );
 };
@@ -17,14 +17,14 @@ const Content = (props) => {
     return parts.map((part) => <Part key={part.id} part={part} />);
   };
   return (
-    <Table basic="very" fixed>
+    <Table basic="very" fixed unstackable>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Name</Table.HeaderCell>
-          <Table.HeaderCell>Exercises</Table.HeaderCell>
+          <Table.HeaderCell width={9}>Name</Table.HeaderCell>
+          <Table.HeaderCell width={3} textAlign="center">Exercises</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
-      {rows()}
+      <Table.Body>{rows()}</Table.Body>
     </Table>
   );
 };
@@ -39,7 +39,8 @@ const Total = (props) => {
 const Course = ({ course }) => {
   return (
     <Segment>
-      <Header as="h2"> {course.name} </Header>
+      <Header as="h3"> {course.name} </Header>
+      <Divider />
       <Content course={course} />
       <Total course={course} />
     </Segment>

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'semantic-ui-css/semantic.min.css';
-import { Container, Divider, Icon, Header } from 'semantic-ui-react';
+import { Container, Divider, Icon, Header, Grid } from 'semantic-ui-react';
 
 import Course from './components/Course';
 import courses from './data/courses';
@@ -14,12 +14,16 @@ const App = () => {
   return (
     <Container text>
       <Divider hidden />
-      <Header as="h1">
-        <Icon name="student" />
-        <Header.Content> Web development curriculum </Header.Content>
-      </Header>
-      <Divider />
-      {rows()}
+      <Grid textAlign="left" columns={1}>
+        <Grid.Column style={{maxWidth: 500}}>
+          <Header as="h2">
+            <Icon name="student" />
+            <Header.Content> Web development curriculum </Header.Content>
+          </Header>
+          <Divider />
+          {rows()}
+        </Grid.Column>
+      </Grid>
     </Container>
   );
 };
