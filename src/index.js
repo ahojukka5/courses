@@ -12,10 +12,9 @@ const App = () => {
     return courses.map((course) => <Course key={course.id} course={course} />);
   };
   return (
-    <Container text>
-      <Divider hidden />
+    <Container text style={{ paddingTop: '1em', paddingBottom: '1em' }}>
       <Grid textAlign="left" columns={1}>
-        <Grid.Column style={{maxWidth: 500}}>
+        <Grid.Column style={{ maxWidth: 500 }}>
           <Header as="h2">
             <Icon name="student" />
             <Header.Content> Web development curriculum </Header.Content>
