@@ -1,6 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Course from './components/Course'
+
+import 'semantic-ui-css/semantic.min.css';
+import { Container, Divider, Icon, Header } from 'semantic-ui-react';
+
+import Course from './components/Course';
+
+const style = {
+  h1: {
+    marginTop: '3em',
+  },
+};
 
 const App = () => {
   const courses = [
@@ -49,13 +59,17 @@ const App = () => {
   ];
 
   const rows = () => {
-    return courses.map(course => <Course key={course.id} course={course} />);
+    return courses.map((course) => <Course key={course.id} course={course} />);
   };
   return (
-    <div>
-      <h1> Web development curriculum </h1>
+    <Container text>
+      <Header as="h1" style={style.h1}>
+        <Icon name="student" />
+        <Header.Content> Web development curriculum </Header.Content>
+      </Header>
+      <Divider />
       {rows()}
-    </div>
+    </Container>
   );
 };
 

@@ -1,44 +1,49 @@
 import React from 'react';
 
-const Header = props => {
-  return <h2>{props.course.name}</h2>;
-};
+import { Header, Segment, Table } from 'semantic-ui-react';
 
-const Part = props => {
+const Part = (props) => {
   return (
-    <p>
-      {props.part.name} {props.part.exercises}
-    </p>
+    <Table.Row>
+      <Table.Cell>{props.part.name}</Table.Cell>
+      <Table.Cell>{props.part.exercises}</Table.Cell>
+    </Table.Row>
   );
 };
 
-const Content = props => {
+const Content = (props) => {
   const parts = props.course.parts;
   const rows = () => {
-    return parts.map(part => <Part key={part.id} part={part} />);
+    return parts.map((part) => <Part key={part.id} part={part} />);
   };
-  return <div>{rows()}</div>;
+  return (
+    <Table basic="very" fixed>
+      <Table.Header>
+        <Table.Row>
+          <Table.HeaderCell>Name</Table.HeaderCell>
+          <Table.HeaderCell>Exercises</Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      {rows()}
+    </Table>
+  );
 };
 
-const Total = props => {
+const Total = (props) => {
   const total = props.course.parts.reduce((total, part) => {
     return total + part.exercises;
   }, 0);
-  return (
-    <p>
-      <b>Total number of exercises {total}:</b>
-    </p>
-  );
+  return <Header as="h3">Total number of exercises: {total}</Header>;
 };
 
-const Course = ({course}) => {
+const Course = ({ course }) => {
   return (
-    <div>
-      <Header course={course} />
+    <Segment>
+      <Header as="h2"> {course.name} </Header>
       <Content course={course} />
       <Total course={course} />
-    </div>
+    </Segment>
   );
 };
 
-export default Course
+export default Course;
