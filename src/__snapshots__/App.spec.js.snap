@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot renders 1`] = `
+<div
+  className="ui text container"
+  style={
+    Object {
+      "paddingBottom": "1em",
+      "paddingTop": "1em",
+    }
+  }
+>
+  <div
+    className="ui left aligned one column grid"
+  >
+    <div
+      className="column"
+      style={
+        Object {
+          "maxWidth": 500,
+        }
+      }
+    >
+      <h2
+        className="ui header"
+      >
+        <i
+          aria-hidden="true"
+          className="student icon"
+          onClick={[Function]}
+        />
+        <div
+          className="content"
+        >
+           Web development curriculum 
+        </div>
+      </h2>
+      <div
+        className="ui divider"
+      />
+      <h3
+        className="ui top attached header"
+      >
+        Half Stack application development
+      </h3>
+      <div
+        className="ui attached segment"
+      >
+        <table
+          className="ui fixed unstackable very basic table"
+        >
+          <thead
+            className=""
+          >
+            <tr
+              className=""
+            >
+              <th
+                className="nine wide"
+              >
+                Name
+              </th>
+              <th
+                className="center aligned three wide"
+              >
+                Exercises
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            className=""
+          >
+            <tr
+              className=""
+            >
+              <td
+                className=""
+              >
+                Fundamentals of React
+              </td>
+              <td
+                className="center aligned"
+              >
+                10
+              </td>
+            </tr>
+            <tr
+              className=""
+            >
+              <td
+                className=""
+              >
+                Using props to pass data
+              </td>
+              <td
+                className="center aligned"
+              >
+                7
+              </td>
+            </tr>
+            <tr
+              className=""
+            >
+              <td
+                className=""
+              >
+                State of a component
+              </td>
+              <td
+                className="center aligned"
+              >
+                14
+              </td>
+            </tr>
+            <tr
+              className=""
+            >
+              <td
+                className=""
+              >
+                Redux
+              </td>
+              <td
+                className="center aligned"
+              >
+                11
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h4
+          className="ui header"
+        >
+          Total number of exercises: 
+          42
+        </h4>
+      </div>
+      <h3
+        className="ui top attached header"
+      >
+        Node.js
+      </h3>
+      <div
+        className="ui attached segment"
+      >
+        <table
+          className="ui fixed unstackable very basic table"
+        >
+          <thead
+            className=""
+          >
+            <tr
+              className=""
+            >
+              <th
+                className="nine wide"
+              >
+                Name
+              </th>
+              <th
+                className="center aligned three wide"
+              >
+                Exercises
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            className=""
+          >
+            <tr
+              className=""
+            >
+              <td
+                className=""
+              >
+                Routing
+              </td>
+              <td
+                className="center aligned"
+              >
+                3
+              </td>
+            </tr>
+            <tr
+              className=""
+            >
+              <td
+                className=""
+              >
+                Middlewares
+              </td>
+              <td
+                className="center aligned"
+              >
+                7
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h4
+          className="ui header"
+        >
+          Total number of exercises: 
+          10
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
